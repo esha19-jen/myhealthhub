@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Health Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>My Health Hub</h1>
+  <p>Family Medical Records in One Place</p>
+</header>
+
+<nav>
+  <button onclick="showSection('overview')">Patient Overview</button>
+  <button onclick="showSection('medicine')">Medicine Reminder</button>
+  <button onclick="showSection('records')">Medical History</button>
+</nav>
+
+<!-- DASHBOARD 1 -->
+<section id="overview" class="card">
+  <h2>Patient Overview</h2>
+  <input id="patientName" placeholder="Patient Name">
+  <input id="patientAge" placeholder="Age">
+  <input id="patientCondition" placeholder="Health Condition">
+  <button onclick="savePatient()">Save Details</button>
+  <p id="patientOutput"></p>
+</section>
+
+<!-- DASHBOARD 2 -->
+<section id="medicine" class="card hidden">
+  <h2>Medicine Reminder</h2>
+  <input id="medicineName" placeholder="Medicine Name">
+  <input type="time" id="medicineTime">
+  <button onclick="setReminder()">Set Reminder</button>
+</section>
+
+<!-- DASHBOARD 3 -->
+<section id="records" class="card hidden">
+  <h2>Medical History</h2>
+  <input type="file">
+  <button>Upload Report</button>
+
+  <h3>AI Health Assistant</h3>
+  <input id="aiQuestion" placeholder="Ask about symptoms or care">
+  <button onclick="aiChat()">Ask</button>
+  <p id="aiAnswer"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
